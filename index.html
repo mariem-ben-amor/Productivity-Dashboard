@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <header>
+    <h1>Productivity Dashboard <img src="images/google-analytics-dashboard-business-analytics-computer-icons-business-765fcf55bef501d8c32ffcc2df83d430.png" alt=""></h1>
+    <p id="date"></p>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li> Dashboard </li>
+        <li>To do Liste </li>
+        <li>Pomodoro Timer </li>
+        <li>Zitate</li>
+      </ul>
+    </nav>
+
+<main class="main">
+<section id="todoList" class="widget">
+<div class="todo-app">
+<h2>Todo List <i class="fa-solid fa-list-ol icon"></i></h2>
+<p id="taskTodo"></p>
+<div class="row">
+  <input type="text" id="inputBox" placeholder="Add your text">
+  <button onclick="addTodo()">Add</button>
+</div>
+<ul id="list-container">
+</ul>
+
+</div>
+
+</section>
+<section id="pomodoro" class="widget">
+  <div class="pomodoro-app">
+  <h2>Pomodoro Timer<i class="fa-solid fa-clock icon"></i></h2>
+
+  <div class="timer-container">
+    <div class="wrapper">
+      <p id="timer-25" class="timer">25:00</p>
+      <button onclick="StartTimer25()">Start Task</button>
+      <button onclick="ResetTimer1()">Reset</button>
+
+  </div>
+
+  <div class="wrapper">
+    <p id="timer-05"class="timer">05:00</p>
+    <button onclick="StartTimer05()">Break</button>
+    <button onclick="ResetTimer2()">Reset</button>
+
+  </div>
+
+  </div>
+  </div>
+
+</section>
+      
+<section id="quotes" class="widget">
+  <h2>Quote of the day<i class="fa-regular fa-comment-dots icon"></i></h2>
+  <div class="quote-container">
+      <blockquote id="quote">Loading...</blockquote>
+  </div>
+  <span id="author">Loading...</span>
+
+  <div class="button-container">
+      <button onclick="getquote(api_url)">New Quote</button>
+      <button onclick="copyQuote()" class="tooltip">
+        <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+        <i class="fa-solid fa-copy" ></i>Copy Quote</button>
+  </div>
+      
+</section>
+    
+</main>
+  </div>
+
+  <footer>
+    <p>© 2025 Mariem Ben Amor</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

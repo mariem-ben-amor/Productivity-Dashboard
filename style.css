@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+font-family: "Ubuntu", sans-serif;
+background: var(--darkBlue);
+color: #333;
+}
+:root{
+  --darkBlue:#2c3e50;
+  --leightGray:#f0f2f5;
+  --purpel:#cd5ff8;
+}
+header {
+  padding: 1.2rem;
+  background: var(--darkBlue);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header p{
+  font-size: 18px;
+  font-weight: 600;
+}
+header h1 img{
+height: 60px;
+width: 60px;}
+
+.icon{
+  color: var(--purpel);
+  margin-left: 15px;
+
+}
+.container {
+  display: flex;
+  min-height: 80vh;
+}
+
+.sidebar {
+  width: 200px;
+  background: var(--darkBlue);
+  color: white;
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 1rem 0;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+}
+.sidebar li:hover {
+  background: rgba(119, 53, 136, 0.459);
+  color: var(--blue);
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  flex: 1;
+}
+.widget {
+  background: var(--darkBlue);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 3px 3px 3px 3px var(--purpel);
+  opacity: 0.9;
+  transition: all 0.5s ease, 0s;
+}
+
+.widget:hover {
+  transform: translateY(-3px);
+}
+h2{
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+  color: white;
+}
+
+/* To-do Liste Section------*/
+.todo-app h2{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content:space-between ;
+  background: var(--leightGray);
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+.row input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.row button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: var(--purpel);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 40px;
+}
+#list-container li{
+ list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+#list-container li::before{
+  content: '';
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 10px;
+}
+#list-container li.checked{
+  color: white;
+  text-decoration: line-through;
+}
+#list-container li.checked::before{
+  background-image: url(images/check-mark-computer-icons-clip-art-green-check-mark-2-icon-6a1dd7d86797ed4a6c4b1d946a71c9b8.png);
+}
+#list-container li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: var(--purpel);
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+#list-container li span:hover{
+  background: #edeef0;
+}
+/* Quote Section-----*/
+.quote-container{
+position: relative;
+}
+.quote-container blockquote{
+  font-size: 26px;
+  color: white;
+  min-height: 110px;
+}
+.quote-container blockquote::before, .quote-box blockquote::after{
+content: ' " ';
+}
+
+#author{
+  display: block;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+  color: white;
+}
+#author::before{
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: var(--purpel);
+  position: absolute;
+  top: 50%;
+  left: -30px;
+}
+#quotes div{
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+#quotes button{
+  background: var(--purpel);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-right: 10px;}
+#quotes button i{
+  margin-right:10px ;
+  font-size: 20px;
+  color: #fff;
+}
+
+#quotes button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/*----------Pomodor App----*/
+.pomodoro-app h2{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.timer-container{
+  height: 350px;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.wrapper{
+  margin: 10px;
+}
+.timer{
+  background-color: #fff;
+  border: 2px solid var(--purpel);
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--purpel);
+  width: 160px;
+  margin: 20px auto;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;}
+#pomodoro button{
+  border: none;
+  outline: none;
+  padding: 16px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background: var(--purpel);
+  color: #fff;
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+  margin: 5px;
+
+}
+#pomodoro button:hover
+{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  font-weight: 700;
+}
+  
