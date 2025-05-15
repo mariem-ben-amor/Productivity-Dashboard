@@ -7,5 +7,5 @@
   <li>HTML</li>
   <li>CSS</li>
   <li>Js</li>
-  <li>API</li>
+  <li>Web API</li>
 </ul>
